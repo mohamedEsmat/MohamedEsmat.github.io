@@ -21,5 +21,20 @@
         <div class="title">Angry Zombies</div>
       </div>
     </div>
+      <script>
+           var OSName="Unknown OS";
+if (navigator.appVersion.indexOf("Win")!=-1) OSName="Windows";
+if (navigator.appVersion.indexOf("Mac")!=-1) OSName="MacOS";
+if (navigator.appVersion.indexOf("X11")!=-1) OSName="UNIX";
+if (navigator.appVersion.indexOf("Linux")!=-1) OSName="Linux";
+
+      function jsFunc2( )
+      {
+          if(OSName=="Windows")
+        gameInstance.sendMessage('MainCamera', 'ExampleFunction', 'Windows');
+          else
+              gameInstance.sendMessage('MainCamera', 'ExampleFunction', 'not');
+      }
+    </script>
   </body>
 </html>
